@@ -26,7 +26,8 @@ const routes = [
   {
     path:'/students/:id',
     name:'studentInfo',
-    component: () => import('../views/StudentInfo.vue')
+    component: () => import('../views/StudentInfo.vue'),
+    props:true//Propsları erişilebilir hale getirmiş oldum.
   }
   //component olarak import olarak ekleme yaptım buna lazy loading deniyor.
   //İhtiyaç olunduu anda sayfanın yüklenmesini sağladık
