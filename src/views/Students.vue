@@ -2,7 +2,7 @@
   <div>
     <h1>Öğrenciler</h1>
     <div v-for="student in students" :key="student.id">
-        <p> {{ student.name }} : {{ student.not }}</p>
+        <router-link :to="{path:`/students/${student.id}`}"> {{ student.name }}</router-link>
     </div>
   </div>
 </template>
