@@ -19,8 +19,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path:'/student',
-    name:'student',
+    path:'/students',
+    name:'students',
     component: () => import('../views/Students.vue')
   },
   {
@@ -28,7 +28,13 @@ const routes = [
     name:'studentInfo',
     component: () => import('../views/StudentInfo.vue'),
     props:true//Propsları erişilebilir hale getirmiş oldum.
-  }
+  }, 
+  //Aşağıda eğer ben url üzerinden hatalı yazım yaparsam eğer yönlendirmeyi ona göre ayarladım
+  {
+    path:'/student',
+    redirect:'/students'
+  },
+
   //component olarak import olarak ekleme yaptım buna lazy loading deniyor.
   //İhtiyaç olunduu anda sayfanın yüklenmesini sağladık
 ]
