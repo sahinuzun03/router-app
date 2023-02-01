@@ -34,6 +34,12 @@ const routes = [
     path:'/student',
     redirect:'/students'
   },
+  //catchAll ile olmayan route bulunduğu zaman notfound sayfasına yönlendirme yaptık
+  {
+    path:'/:catchAll(.*)',
+    name:'notFound',
+    component: () => import('../views/NotFound.vue')
+  },
 
   //component olarak import olarak ekleme yaptım buna lazy loading deniyor.
   //İhtiyaç olunduu anda sayfanın yüklenmesini sağladık
